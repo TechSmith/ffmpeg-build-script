@@ -264,12 +264,8 @@ Install the binary to your /usr/local/bin folder? [Y/n] y
 Password:
 ```
     
-
-Other Projects Of Mine
-------------
-- [Pushover CLI Client](https://github.com/markus-perl/pushover-cli)
-- [Gender API](https://gender-api.com): [Genderize A Name](https://gender-api.com)
-- [Gender API Client PHP](https://github.com/markus-perl/gender-api-client)
-- [Gender API Client NPM](https://github.com/markus-perl/gender-api-client-npm)
-- [Genderize Names](https://www.youtube.com/watch?v=2SLIAguaygo)
-- [Genderize API](https://gender-api.io)
+## Building and running docker container to extract ffprobe/ffmpeg
+1. Clone this repository and install docker (I used a mac).
+2. Build the image. Run this from the cloned directory - `docker build --tag ffmpegbuilder1 .`
+3. Run the container. - `docker run --detach --name ffmpeg ffmpegbuilder1`
+4. Copy the ffprobe file from the docker container - `docker cp ffmpeg:/usr/bin/ffprobe ./`
